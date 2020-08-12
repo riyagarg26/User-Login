@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>Register</title>
+    <head></head>
+    <body>
+        <% if(typeof err != 'undefined') { %>
+           <h1><%= err %></h1> 
+
+       <% } %>
+    
+      <form action="/register" method="POST"  enctype="multipart/form-data">
+        
+        <div> 
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="name" required>
+        </div>
+        <div> 
+            <label for="Email">Image</label>
+            <input type="file"  name="file" required>
+        </div>
+        
+        <div> 
+            <label for="Email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email" required>
+        </div>
+        
+        <div> 
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" placeholder="password" >
+        </div>
+        <div> 
+            <label for="confirmpassword">Confirm password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="confirmpassword" >
+        </div>
+        
+        <button type="submit">Register</button>
+
+      </form>
+      <a href="/login">Login</a>
+    </body>
+</html>
+
